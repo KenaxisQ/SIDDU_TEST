@@ -13,7 +13,7 @@ pipeline {
             post {
                 success {
                     echo 'Archiving the artifacts'
-                    archiveArtifacts artifacts: 'target/nestNavigator-0.0.1-SNAPSHOT.war', followSymlinks: false
+                    archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
                                     path: '',
                                     url: 'http://192.168.0.104:8010/manager/html/list'
                                 )
-                            ], contextPath: '/nestNavigate', war: 'target/nestNavigator-0.0.1-SNAPSHOT.war'  // Corrected `null` and quoted the war path
+                            ], contextPath: '/nestNavigate', war: 'target/*.war'  // Corrected `null` and quoted the war path
                         }
                     }
                 }
