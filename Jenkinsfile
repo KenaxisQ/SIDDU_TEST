@@ -30,7 +30,7 @@ pipeline {
                                     path: '',
                                     url: 'http://192.168.0.104:8010/manager/html/list'
                                 )
-                            ], contextPath: '/nestNavigate', war: 'target/*.war'  // Corrected `null` and quoted the war path
+                            ], contextPath: '/nestNavigator', war: 'target/*.war'  // Corrected `null` and quoted the war path
                         }
                     }
                 }
